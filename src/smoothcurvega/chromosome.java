@@ -8,13 +8,25 @@ public class chromosome {
     public chromosome() {
         this.fitnessValue = 0;
     }
-        
+        public void copy(chromosome c)
+        {
+            this.name = new double[c.name.length];
+            for(int i=0 ; i< c.name.length; i++)
+            {
+                this.name[i]=c.name[i];
+            }
+            this.fitnessValue =c.fitnessValue;
+        }
         public chromosome(int D) {
         name = new double[D+1];
          for (int i = 0; i < D+1; i++) {
              Random r = new Random();
              name[i] = -10 + r.nextDouble() * (10 - (-10));
         }
+    }
+
+    public chromosome(double[] name) {
+        this.name = name;
     }
 
     public double[] getName() {
@@ -33,14 +45,19 @@ public class chromosome {
         this.fitnessValue = fitnessValue;
     }
 
-    public void tooString(int j) 
-    {
-        System.out.print("C"+ j + " {name=");
+    public String tooString(int j) 
+    {   String S="";
+        S+="TC";
+        S+= j;
+        S+= " {name=";
         for(int i=0 ; i<name.length; i++)
-        {  System.out.print(String.format("%.5f",name[i])+"  ");
+        { S+=String.format("%.5f",name[i])+"  ";
         }
-        System.out.println(" fitnessValue= " + String.format("%.5f",fitnessValue)+ '}'); 
+        S+=" fitnessValue= " + String.format("%.5f",fitnessValue)+ '}'; 
+    return S;
     }
+
+   
         
 
 }
