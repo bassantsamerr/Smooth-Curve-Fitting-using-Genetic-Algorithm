@@ -45,10 +45,10 @@ public class chromosome {
         this.fitnessValue = fitnessValue;
     }
 
-    public String tooString(int j) 
+    public String tooString(int j)
     {   String S="";
         S+="TC";
-        S+= j;
+        S+= j+1;
         S+= " {name=";
         for(int i=0 ; i<name.length; i++)
         { S+=String.format("%.5f",name[i])+"  ";
