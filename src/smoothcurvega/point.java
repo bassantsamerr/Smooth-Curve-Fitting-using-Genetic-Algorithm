@@ -1,7 +1,6 @@
 package smoothcurvega;
 /**
- *
- * @author reem , bassant
+ * @author Reem, Bassant, Mahmoud
  */
 public class point {
     private double x, y;

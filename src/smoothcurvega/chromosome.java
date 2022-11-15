@@ -1,7 +1,9 @@
 package smoothcurvega;
 
 import java.util.Random;
-
+/**
+ * @author Reem, Bassant, Mahmoud
+ */
 public class chromosome {
     	public double name[];
         private double fitnessValue;

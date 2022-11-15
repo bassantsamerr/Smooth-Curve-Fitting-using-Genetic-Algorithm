@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 /**
- * @author Reem
+ * @author Reem, Bassant, Mahmoud
  */
 public class SmoothCurveGA {
 
