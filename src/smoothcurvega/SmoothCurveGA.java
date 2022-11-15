@@ -7,12 +7,13 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+
 import static java.lang.Math.pow;
+
 import java.util.ArrayList;
 import java.util.Random;
 
 /**
- *
  * @author Reem
  */
 public class SmoothCurveGA {
@@ -191,7 +192,7 @@ public class SmoothCurveGA {
 
     public static void main(String[] args) throws FileNotFoundException, IOException {
         FileWriter myWriter = new FileWriter("output.txt");
-      
+
         int maxGenerations = 5;
         File file = new File("curve_fitting_input.txt");
         BufferedReader br = new BufferedReader(new FileReader(file));
@@ -240,26 +241,14 @@ public class SmoothCurveGA {
                 nonUniformMutation(currentGeneration, maxGenerations, offsprings);
                 etlisimReplacement(offsprings, points);
             }
-            //info.write(population.get(0).tooString(t));
-String tmp = population.get(0).tooString(t);    
-           
-         myWriter.write(tmp);
-          myWriter.write("\n");
-   //     
+
+            String tmp = population.get(0).tooString(t);
+
+            myWriter.write(tmp);
+            myWriter.write("\n");
+
         }
- myWriter.close();
-//        
-//         System.out.println("intialize population");
-        // printPopulation(population);
-//        printPopulation(selected);
-//        System.out.println("after cross over ");
-//        printPopulation(offsprings);
-//        System.out.println("after mutation");
-//        
-//        printPopulation(offsprings);
-//        System.out.println("after etlisim replacement");
-//     
-//        printPopulation(population);
+        myWriter.close();
     }
 
 }
