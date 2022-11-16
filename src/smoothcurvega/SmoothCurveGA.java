@@ -18,7 +18,7 @@ import java.util.Random;
  */
 public class SmoothCurveGA {
 
-    static int populationSize = 8;
+    static int populationSize = 20;
     static ArrayList<chromosome> population = new ArrayList<chromosome>();
     static double pc = 0.7;
     static double pm = 0.1;
@@ -193,7 +193,7 @@ public class SmoothCurveGA {
     public static void main(String[] args) throws FileNotFoundException, IOException {
         FileWriter myWriter = new FileWriter("output.txt");
 
-        int maxGenerations = 5;
+        int maxGenerations = 100;
         File file = new File("curve_fitting_input.txt");
         BufferedReader br = new BufferedReader(new FileReader(file));
         String st;
